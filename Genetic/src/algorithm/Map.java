@@ -36,7 +36,7 @@ public class Map {
 				if(m != n) {
 					int deltaX = cellList.get(m).getPosition().x - cellList.get(n).getPosition().x;
 					int deltaY = cellList.get(m).getPosition().y - cellList.get(n).getPosition().y;
-					int currentDistance = ((Double)Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2))).intValue();
+					double currentDistance = ((Double)Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
 					if(currentDistance < smallestDistance) {
 						smallestDistance = currentDistance;
 					}
