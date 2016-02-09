@@ -34,7 +34,7 @@ public class Panel extends JPanel {
 	        Color color;
 	        for(int j = 0; j < cellList.size(); j++)
 	        {
-	            e = (Ellipse2D)new Ellipse2D.Double(cellList.get(j).getPosition().getX()-2, cellList.get(j).getPosition().getY()-2, 4,4);
+	            e = (Ellipse2D)new Ellipse2D.Double(cellList.get(j).getPosition().getX()-cellList.get(j).getSize()/2, cellList.get(j).getPosition().getY()-cellList.get(j).getSize()/2, cellList.get(j).getSize(),cellList.get(j).getSize());
 	            color = Color.RED;
 	            g2.setPaint(color);
 	            g2.fill(e);

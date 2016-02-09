@@ -11,6 +11,7 @@ public class Frame extends JFrame {
 		setSize(1000,1000);
 		setVisible(true);
 		setContentPane(new Panel(cellList));
+		setResizable(false);
 		
 		
 	}

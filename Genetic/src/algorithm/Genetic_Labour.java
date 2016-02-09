@@ -27,7 +27,7 @@ public class Genetic_Labour {
 				currentLowestFitness = map;
 			} else if (secondBestFitness == null && map.getFitness() > currentLowestFitness.getFitness()) {
 				secondBestFitness = map;
-			} else if (secondBestFitness == null && map.getFitness() < currentLowestFitness.getFitness()) {
+			} else if (secondBestFitness == null && map.getFitness() <= currentLowestFitness.getFitness()) {
 				secondBestFitness = currentLowestFitness;
 				currentLowestFitness = map;
 			} else if (map.getFitness() < currentLowestFitness.getFitness()) {
@@ -63,14 +63,14 @@ public class Genetic_Labour {
 				if (random.nextInt(100) >= 2) {
 					childCellList.add(currentLowestFitness.getCellList().get(i));
 				} else {
-					childCellList.add(new Cell(new Point(random.nextInt(MAXIMUM_X_POSITION), random.nextInt(MAXIMUM_Y_POSITION))));
+					childCellList.add(new Cell(new Point(random.nextInt(MAXIMUM_X_POSITION), random.nextInt(MAXIMUM_Y_POSITION)), random.nextInt(Map.CELL_MAXIMUM_SIZE-4)+4));
 				}
 			}
 			for (int i = crossDivider; i < secondBestFitness.getCellList().size(); i++) {
 				if (random.nextInt(100) >= 2) {
 					childCellList.add(secondBestFitness.getCellList().get(i));
 				} else {
-					childCellList.add(new Cell(new Point(random.nextInt(MAXIMUM_X_POSITION), random.nextInt(MAXIMUM_Y_POSITION))));
+					childCellList.add(new Cell(new Point(random.nextInt(MAXIMUM_X_POSITION), random.nextInt(MAXIMUM_Y_POSITION)), random.nextInt(Map.CELL_MAXIMUM_SIZE-4)+4));
 				}
 			}
 			childMap.setCellList(childCellList);
