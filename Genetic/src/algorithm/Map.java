@@ -44,31 +44,6 @@ public class Map {
 				}
 			}
 		}
-		
-//		double smallestDistanceOverall = 1000;
-//		double largestDistance = 0;
-//		double smallestDistance = 1000;
-//		for(int m = 0; m < cellList.size(); m++) {
-//			for(int n = 0; n < cellList.size(); n++) {
-//				if(m != n) {
-//					int deltaX = cellList.get(m).getPosition().x - cellList.get(n).getPosition().x;
-//					int deltaY = cellList.get(m).getPosition().y - cellList.get(n).getPosition().y;
-//					double currentDistance = ((Double)Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
-//					if(currentDistance < smallestDistance) {
-//						smallestDistance = currentDistance;
-//					}
-//				}
-//			}
-//			if(smallestDistance < smallestDistanceOverall) {
-//				smallestDistanceOverall = smallestDistance;
-//			} 
-//			if(smallestDistance > largestDistance) {
-//				largestDistance = smallestDistance;
-//			}
-//			smallestDistance = 1000;
-//		}
-//		fitness = (smallestDistanceOverall/largestDistance)*10000.0;
-//		//System.out.println(fitness);
 	}
 	public ArrayList<Cell> getCellList() {
 		return cellList;
