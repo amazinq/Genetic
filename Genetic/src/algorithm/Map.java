@@ -21,7 +21,7 @@ public class Map {
 	
 	public void generateMap() {
 		Random random = new Random();
-		for(int i = 0; i < 30; i++) {
+		for(int i = 0; i < 50; i++) {
 			cellList.add(new Cell(new Point(random.nextInt(Genetic_Labour.MAXIMUM_X_POSITION), random.nextInt(Genetic_Labour.MAXIMUM_Y_POSITION)), random.nextInt(CELL_MAXIMUM_SIZE-4)+4));
 		}
 		
@@ -38,7 +38,7 @@ public class Map {
 					int deltaX = cellList.get(m).getPosition().x - cellList.get(n).getPosition().x;
 					int deltaY = cellList.get(m).getPosition().y - cellList.get(n).getPosition().y;
 					double currentDistance = ((Double)Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2)));
-					if(currentDistance < CELL_MAXIMUM_SIZE*1.8) {
+					if(currentDistance < CELL_MAXIMUM_SIZE*1) {
 						fitness = 100;
 					}
 				}

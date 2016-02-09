@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 public class Frame extends JFrame {
 
 	public Frame(ArrayList<Cell> cellList) {
-		setSize(1000,1000);
+		setSize(800,800);
 		setVisible(true);
 		setContentPane(new Panel(cellList));
 		setResizable(false);
